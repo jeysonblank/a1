@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            background-color: wheat;
+            /* position: fixed;
+            top: 0;
+            right: 0; */
+        }
+        header{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        main{
+            text-align: center;
+            padding: 40px;
+        }
+        footer{
+            text-align: center;
+            flex-direction: column;
+            padding: 30px;
+            background-color: black;
+            color: blue;
+        }
+          @media (max-width: 600px) {
+      header, footer {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      main {
+        padding: 15px;
+      }
+    }
+  .div{
+        /* position: fixed;
+        top: 0;
+        right: 0; */
+         background-color: black;
+         width: 40px;
+         height: 7px;
+         margin: 6px 0;
+    }
+    /* #div{
+        background-color: black;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+    } */
+    .sidbar{
+        width: 260px;
+        height: 100vh;
+        background: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        transition: right 0.3s ease;
+        padding: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>>این قسمت هدر نام دار</h1>
+        <div id="div" onclick="togtleSidbar()">
+       <div >
+             <div class="div"></div>
+             <div class="div"></div>
+              <div class="div"></div>
+       </div>
+    </header>
+    <main>
+        <p>>این قسمت صفحه اصلی یا بدنه نام دار</p>
+        <div class="sidbar" id="sidbar" >
+        
+            <ul>
+                <li>login signup</li>
+                <li>hom</li>
+                <li>about</li>
+                <li>map</li>
+                <li>call</li>
+            </ul>
+        </div>
+    </main>
+    <div style="width: 100px;height: 10000000px;"></div>
+    <footer>این قسمت فوتتر نام دارد</footer>
+    
+</body>
+<script>
+    function togtleSidbar() {
+        const sidbar =
+        document.getElementById('sidbar');
+            if (sidbar.style.right==='0px')
+                {
+                    sidbar.style.right= 
+                    '-300px';
+                } //
+             else {
+                sidbar.style.right= '0px';
+
+            }
+    }
+</script>
+</html>
